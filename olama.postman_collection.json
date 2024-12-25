@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "9eb58707-412a-4502-ae00-725f85fabd0c",
+		"name": "olama",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1451160"
+	},
+	"item": [
+		{
+			"name": "ask",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prompt",
+							"value": "what is java?",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/ask?prompt=what is java",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ask"
+					],
+					"query": [
+						{
+							"key": "prompt",
+							"value": "what is java"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8000/ask\" \\\n-F \"prompt=Your prompt text here\" \\\n-F \"file=@path_to_your_file.txt\"\n"
+			},
+			"response": []
+		},
+		{
+			"name": "generate_sql",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prompt",
+							"value": "process a Firebird SQL query, convert it into PostgreSQL syntax, and then generate corresponding test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/Users/ivantrubnikov/Documents/git/egor-v2/lama/ollama-docker-fastapi-main/files/file1.txt",
+								"/Users/ivantrubnikov/Documents/git/egor-v2/lama/ollama-docker-fastapi-main/files/file2.txt"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/generate_sql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"generate_sql"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8000/ask\" \\\n-F \"prompt=Your prompt text here\" \\\n-F \"file=@path_to_your_file.txt\"\n"
+			},
+			"response": []
+		},
+		{
+			"name": "generate_tests",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prompt",
+							"value": "process a Firebird SQL query, convert it into PostgreSQL syntax, and then generate corresponding test",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/ivantrubnikov/Documents/git/egor-v2/lama/ollama-docker-fastapi-main/files/file1.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/generate_tests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"generate_tests"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8000/ask\" \\\n-F \"prompt=Your prompt text here\" \\\n-F \"file=@path_to_your_file.txt\"\n"
+			},
+			"response": []
+		}
+	]
+}
