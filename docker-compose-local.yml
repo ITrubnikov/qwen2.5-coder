@@ -1,0 +1,9 @@
+version: "4"
+
+services:
+  web:
+    image: my-fastapi-app
+    ports:
+      - 8000:8000
+    volumes:
+      - ./fastapi:/app

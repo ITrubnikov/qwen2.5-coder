@@ -1,0 +1,14 @@
+version: "4"
+
+services:
+  ollama:
+    image: my-ollama-app
+    ports:
+      - 11434:11434
+    volumes:
+      - tutorial-vol:/ollama
+    entrypoint: ["/usr/bin/bash", "/pull-llama3.sh"]
+
+volumes:
+  tutorial-vol:
+    driver: local
