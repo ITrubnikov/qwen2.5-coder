@@ -2,12 +2,18 @@ version: "4"
 
 services:
   ollama:
-    image: my-ollama-app
+    build: ollama
     ports:
       - 11434:11434
     volumes:
       - tutorial-vol:/ollama
+    networks:
+      - tutorial-net
     entrypoint: ["/usr/bin/bash", "/pull-llama3.sh"]
+
+networks:
+  tutorial-net:
+    driver: bridge
 
 volumes:
   tutorial-vol:
